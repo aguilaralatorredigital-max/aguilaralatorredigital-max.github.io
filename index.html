@@ -1,385 +1,285 @@
-:root{
-  --bg: #0F0A1A;
-  --surface: rgba(255,255,255,.04);
-  --surface2: rgba(255,255,255,.06);
-  --border: rgba(255,255,255,.10);
-  --text: rgba(255,255,255,.92);
-  --muted: rgba(255,255,255,.72);
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aguilar Alatorre Digital | Portafolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Edición de imágenes, páginas web y diagnóstico de mejora para negocios locales." />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container row">
+      <a class="logo brand" href="#inicio">
+        <img src="logo.png.png" alt="Aguilar Alatorre Digital" />
+        <span>Aguilar Alatorre Digital</span>
+      </a>
+      <nav class="nav">
+        <a href="#servicios">Servicios</a>
+        <a href="#como-ayudo">Cómo ayudo</a>
+        <a href="#portafolio">Portafolio</a>
+        <a href="#proceso">Proceso</a>
+        <a class="btn small" href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-  --accent: #FF2EA6;   /* magenta */
-  --gold:   #FFC83D;   /* dorado */
-  --purple: #7B61FF;   /* morado */
-  --radius: 18px;
-  --shadow: 0 18px 55px rgba(0,0,0,.45);
-}
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="tag">Edición de imágenes • Páginas web • Diagnóstico de mejora</p>
+          <h1>Mejoro tu presencia digital para que se vea <span class="accent">profesional</span> y sea fácil contactarte.</h1>
+          <p class="sub">
+            Edición de fotos (productos, espacios, menús) + páginas web claras y actualizadas.
+            También hago un diagnóstico rápido para detectar problemas típicos: errores visibles, contenido desactualizado, mala vista en celular y falta de botones (WhatsApp / Reservar).
+          </p>
 
-*{ box-sizing:border-box; }
-html{ scroll-behavior:smooth; }
-body{
-  margin:0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: var(--text);
-  background:
-    radial-gradient(1100px 500px at 15% -10%, rgba(255,46,166,.22), transparent 60%),
-    radial-gradient(900px 500px at 90% 10%, rgba(255,200,61,.16), transparent 55%),
-    radial-gradient(900px 600px at 60% 110%, rgba(123,97,255,.18), transparent 55%),
-    var(--bg);
-}
+          <div class="cta-row">
+            <a class="btn" href="https://wa.me/5213313820701?text=Hola%20Daniela%2C%20me%20interesa%20un%20diagn%C3%B3stico%20para%20mi%20web%20o%20mejorar%20mis%20im%C3%A1genes." target="_blank" rel="noreferrer">
+              Escríbeme por WhatsApp
+            </a>
+            <a class="btn ghost" href="#servicios">Ver servicios</a>
+          </div>
 
-.container{
-  width:min(1100px, calc(100% - 40px));
-  margin:0 auto;
-}
+          <div class="badges">
+            <div class="badge">
+              <strong>Diagnóstico</strong>
+              <span>24–48 hrs</span>
+            </div>
+            <div class="badge">
+              <strong>Enfoque</strong>
+              <span>Práctico y gradual</span>
+            </div>
+            <div class="badge">
+              <strong>Mobile</strong>
+              <span>Optimizado para celular</span>
+            </div>
+          </div>
+        </div>
 
-.row{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:14px;
-}
+        <div class="card">
+          <div class="avatar"></div>
+          <h3>Mtra. Daniela Alatorre</h3>
+          <p class="muted">Aguilar Alatorre Digital</p>
+          <ul class="mini">
+            <li>✔ Edición y optimización de imágenes</li>
+            <li>✔ Creación / actualización de páginas web</li>
+            <li>✔ Diagnóstico con lista de mejoras priorizadas</li>
+          </ul>
+          <a class="btn full" href="https://wa.me/5213313820701?text=Hola%20Daniela%2C%20quiero%20una%20propuesta%20para%20mejorar%20mi%20web%20o%20mis%20im%C3%A1genes." target="_blank" rel="noreferrer">Pedir propuesta</a>
+        </div>
+      </div>
+    </section>
 
-.topbar{
-  position:sticky;
-  top:0;
-  z-index:50;
-  backdrop-filter: blur(10px);
-  background: rgba(10,7,18,.55);
-  border-bottom: 1px solid rgba(255,255,255,.08);
-}
+    <section id="servicios" class="section">
+      <div class="container">
+        <h2>Servicios</h2>
+        <p class="muted">Me enfoco en 3 cosas: imágenes, web y diagnóstico (sin complicaciones).</p>
 
-.brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  text-decoration:none;
-  color: var(--text);
-  font-weight:800;
-  letter-spacing:-0.01em;
-}
+        <div class="grid3">
+          <div class="panel">
+            <h3>Edición de imágenes</h3>
+            <ul>
+              <li>Color, luz, contraste</li>
+              <li>Recorte, enderezar, fondo limpio</li>
+              <li>Optimización para web (peso/calidad)</li>
+            </ul>
+          </div>
 
-.brand img{
-  width:36px;
-  height:36px;
-  border-radius:12px;
-  border: 1px solid rgba(255,255,255,.10);
-}
+          <div class="panel">
+            <h3>Páginas web</h3>
+            <ul>
+              <li>Web sencilla y clara (landing)</li>
+              <li>Actualización de sitios desactualizados</li>
+              <li>Botones de contacto: WhatsApp / Reservar / Llamar</li>
+            </ul>
+          </div>
 
-.nav{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  flex-wrap:wrap;
-}
-.nav a{
-  color: var(--muted);
-  text-decoration:none;
-  font-weight:700;
-  font-size:14px;
-  padding:10px 10px;
-  border-radius:12px;
-}
-.nav a:hover{
-  color: var(--text);
-  background: rgba(255,255,255,.06);
-}
+          <div class="panel">
+            <h3>Diagnóstico web (sin compromiso)</h3>
+            <ul>
+              <li>Errores visibles (enlaces, embeds, secciones rotas)</li>
+              <li>Contenido viejo / falta de info clave</li>
+              <li>Mejoras en móvil + llamadas a la acción</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-main{ overflow-x:hidden; }
+    <section id="como-ayudo" class="section alt">
+      <div class="container">
+        <h2>Cómo ayudo (problemas comunes que detecto)</h2>
+        <p class="muted">
+          Muchas páginas pierden clientes por detalles: información incompleta, sitio lento en celular o falta de un botón claro para contactar.
+        </p>
 
-/* HERO */
-.hero{
-  padding: 76px 0 40px;
-}
-.hero-grid{
-  display:grid;
-  grid-template-columns: 1.25fr .85fr;
-  gap: 22px;
-  align-items:start;
-}
-.tag{
-  display:inline-block;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.10);
-  color: var(--text);
-  font-weight:700;
-  font-size:13px;
-}
-h1{
-  margin: 16px 0 10px;
-  font-size: clamp(34px, 4vw, 54px);
-  line-height:1.05;
-  letter-spacing:-0.04em;
-}
-.accent{
-  background: linear-gradient(90deg, var(--accent), var(--gold));
-  -webkit-background-clip:text;
-  background-clip:text;
-  color: transparent;
-}
-.sub{
-  margin: 0 0 18px;
-  color: var(--muted);
-  line-height:1.7;
-  max-width: 62ch;
-}
+        <div class="grid3">
+          <div class="panel">
+            <h3>Problemas típicos</h3>
+            <ul>
+              <li>Web caída o con errores visibles</li>
+              <li>Contenido desactualizado (años anteriores, secciones abandonadas)</li>
+              <li>No se entiende cómo reservar/llamar</li>
+            </ul>
+          </div>
 
-.cta-row{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin: 16px 0 18px;
-}
+          <div class="panel">
+            <h3>Mejoras rápidas (quick wins)</h3>
+            <ul>
+              <li>Arreglo de enlaces / secciones rotas</li>
+              <li>Botones WhatsApp / Reservar</li>
+              <li>Fotos optimizadas y más ligeras</li>
+            </ul>
+          </div>
 
-/* BUTTONS */
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding: 12px 14px;
-  border-radius: 14px;
-  font-weight:800;
-  text-decoration:none;
-  border: 1px solid transparent;
-  letter-spacing:-0.01em;
-  background: linear-gradient(135deg, var(--accent), var(--purple));
-  color: #fff;
-  box-shadow: 0 18px 40px rgba(255,46,166,.18);
-}
-.btn:hover{ filter: brightness(1.05); }
-.btn.ghost{
-  background: rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,.14);
-  color: var(--text);
-  box-shadow:none;
-}
-.btn.small{
-  padding: 10px 12px;
-  font-size: 13px;
-}
-.btn.full{ width:100%; }
+          <div class="panel">
+            <h3>Mejora completa</h3>
+            <ul>
+              <li>Estructura clara (qué ofreces, horarios, ubicación)</li>
+              <li>Diseño moderno + confianza (reseñas, fotos)</li>
+              <li>Optimización móvil y performance</li>
+            </ul>
+          </div>
+        </div>
 
-/* BADGES */
-.badges{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-top: 14px;
-}
-.badge{
-  padding: 12px 12px;
-  border-radius: 14px;
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.08);
-}
-.badge strong{ display:block; font-weight:900; }
-.badge span{ color: var(--muted); font-size:13px; }
+        <div class="note">
+          <strong>Tip:</strong> Si estás empezando, podemos iniciar con diagnóstico + mejoras urgentes y después crecer el proyecto.
+        </div>
+      </div>
+    </section>
 
-/* CARD */
-.card{
-  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: var(--radius);
-  padding: 18px;
-  box-shadow: var(--shadow);
-}
-.avatar{
-  width: 44px;
-  height: 44px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, rgba(255,46,166,.6), rgba(123,97,255,.55));
-  border: 1px solid rgba(255,255,255,.12);
-  margin-bottom: 10px;
-}
-.muted{ color: var(--muted); }
-.mini{
-  margin: 10px 0 14px;
-  padding: 0 0 0 18px;
-  color: var(--muted);
-  line-height:1.7;
-}
+    <section id="portafolio" class="section">
+      <div class="container">
+        <h2>Portafolio</h2>
+        <p class="muted">Mientras el portafolio crece, lo ideal es mostrar “Antes / Después” y demos.</p>
 
-/* SECTIONS */
-.section{
-  padding: 70px 0;
-}
-.section.alt{
-  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.00));
-  border-top: 1px solid rgba(255,255,255,.06);
-  border-bottom: 1px solid rgba(255,255,255,.06);
-}
-h2{
-  margin: 0 0 10px;
-  font-size: clamp(26px, 2.8vw, 38px);
-  letter-spacing:-0.02em;
-}
-.grid3{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-top: 16px;
-}
-.panel{
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.10);
-  border-radius: var(--radius);
-  padding: 18px;
-}
-.panel h3{ margin:0 0 8px; }
-.panel ul{
-  margin: 10px 0 0;
-  padding: 0 0 0 18px;
-  color: var(--muted);
-  line-height: 1.7;
-}
+        <div class="grid3">
+          <article class="work">
+            <div class="thumb">Antes / Después</div>
+            <h4>Edición de imagen – luz y color</h4>
+            <p class="muted">Mejora de iluminación, contraste y limpieza visual.</p>
+          </article>
 
-.work{
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.10);
-  border-radius: var(--radius);
-  padding: 16px;
-}
-.thumb{
-  height: 140px;
-  border-radius: 16px;
-  display:grid;
-  place-items:center;
-  font-weight:900;
-  color: rgba(255,255,255,.9);
-  background:
-    radial-gradient(500px 180px at 20% 30%, rgba(255,46,166,.25), transparent 60%),
-    radial-gradient(500px 180px at 80% 50%, rgba(255,200,61,.18), transparent 60%),
-    radial-gradient(500px 220px at 50% 120%, rgba(123,97,255,.22), transparent 60%),
-    rgba(255,255,255,.03);
-  border: 1px solid rgba(255,255,255,.10);
-  margin-bottom: 10px;
-}
+          <article class="work">
+            <div class="thumb">Demo Web</div>
+            <h4>Web sencilla para negocio local</h4>
+            <p class="muted">Landing con CTA a WhatsApp, mapa y secciones esenciales.</p>
+          </article>
 
-.note{
-  margin-top: 18px;
-  padding: 14px 16px;
-  border-radius: 16px;
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.10);
-  color: rgba(255,255,255,.82);
-}
+          <article class="work">
+            <div class="thumb">Diagnóstico</div>
+            <h4>Lista priorizada de mejoras</h4>
+            <p class="muted">Errores visibles + contenido + móvil + CTAs.</p>
+          </article>
+        </div>
 
-/* Steps */
-.steps{
-  display:grid;
-  gap: 12px;
-  margin-top: 16px;
-}
-.step{
-  display:flex;
-  gap: 12px;
-  align-items:flex-start;
-  padding: 14px;
-  border-radius: 16px;
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.10);
-}
-.step span{
-  width: 34px;
-  height: 34px;
-  border-radius: 12px;
-  display:grid;
-  place-items:center;
-  font-weight: 900;
-  background: linear-gradient(135deg, var(--accent), var(--purple));
-}
-.step h4{ margin:0 0 6px; }
-.step p{ margin:0; }
+        <div class="note">
+          <strong>Tip:</strong> si aún no tienes trabajos, crea 6 ejemplos con marcas ficticias (cafetería, hotel, estética, restaurante).
+        </div>
+      </div>
+    </section>
 
-/* Pricing */
-.price{
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.10);
-  border-radius: var(--radius);
-  padding: 18px;
-}
-.price.featured{
-  background: linear-gradient(135deg, rgba(255,200,61,.12), rgba(255,46,166,.10));
-  border: 1px solid rgba(255,255,255,.12);
-}
-.amount{
-  font-size: 22px;
-  font-weight: 900;
-  margin: 6px 0 12px;
-}
-.price ul{
-  margin: 0 0 12px;
-  padding: 0 0 0 18px;
-  color: var(--muted);
-  line-height: 1.7;
-}
+    <section id="proceso" class="section alt">
+      <div class="container">
+        <h2>Proceso</h2>
+        <div class="steps">
+          <div class="step"><span>1</span><div><h4>Me compartes tu web / imágenes</h4><p class="muted">Link o fotos + qué quieres lograr (reservas, WhatsApp, llamadas).</p></div></div>
+          <div class="step"><span>2</span><div><h4>Diagnóstico / propuesta</h4><p class="muted">Te envío lista priorizada + tiempos y alcance.</p></div></div>
+          <div class="step"><span>3</span><div><h4>Mejoras</h4><p class="muted">Quick wins primero y luego mejora completa (si aplica).</p></div></div>
+          <div class="step"><span>4</span><div><h4>Entrega</h4><p class="muted">Archivos finales + recomendaciones para mantenerlo actualizado.</p></div></div>
+        </div>
+      </div>
+    </section>
 
-/* Contact */
-.contact{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  align-items:start;
-}
-.contact-cards{
-  display:grid;
-  gap: 10px;
-  margin-top: 14px;
-}
-.contact-card{
-  display:flex;
-  justify-content:space-between;
-  gap: 12px;
-  text-decoration:none;
-  padding: 14px;
-  border-radius: 16px;
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.10);
-  color: var(--text);
-}
-.contact-card:hover{ background: rgba(255,255,255,.06); }
+    <section id="paquetes" class="section">
+      <div class="container">
+        <h2>Paquetes</h2>
+        <p class="muted">Puedes dejar “desde” y ajustar precios cuando quieras.</p>
 
-.form{
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.10);
-  border-radius: var(--radius);
-  padding: 18px;
-}
-label{
-  display:block;
-  font-weight: 800;
-  margin-bottom: 10px;
-}
-input, textarea{
-  width:100%;
-  margin-top: 8px;
-  padding: 12px 12px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(0,0,0,.18);
-  color: var(--text);
-  outline:none;
-}
-input:focus, textarea:focus{
-  border-color: rgba(255,46,166,.6);
-  box-shadow: 0 0 0 4px rgba(255,46,166,.10);
-}
-.tiny{ font-size: 12.5px; }
+        <div class="grid3">
+          <div class="price">
+            <h3>Diagnóstico</h3>
+            <p class="amount">Desde $___</p>
+            <ul>
+              <li>Revisión de sitio + lista priorizada</li>
+              <li>Mejoras recomendadas (quick wins)</li>
+              <li>Entrega 24–48 hrs</li>
+            </ul>
+            <a class="btn ghost full" href="#contacto">Me interesa</a>
+          </div>
 
-/* Footer */
-.footer{
-  border-top: 1px solid rgba(255,255,255,.08);
-  padding: 24px 0;
-  background: rgba(0,0,0,.15);
-}
-.footer a{ text-decoration:none; }
-.footer a:hover{ text-decoration:underline; }
+          <div class="price featured">
+            <h3>Web Esencial</h3>
+            <p class="amount">Desde $___</p>
+            <ul>
+              <li>Landing (servicios, fotos, contacto)</li>
+              <li>Botones WhatsApp / Reservar</li>
+              <li>Optimización móvil</li>
+            </ul>
+            <a class="btn full" href="#contacto">Cotizar</a>
+          </div>
 
-/* Responsive */
-@media (max-width: 980px){
-  .hero-grid{ grid-template-columns: 1fr; }
-  .badges{ grid-template-columns: 1fr; }
-  .grid3{ grid-template-columns: 1fr; }
-  .contact{ grid-template-columns: 1fr; }
-  .nav{ display:none; }
-}
+          <div class="price">
+            <h3>Imágenes</h3>
+            <p class="amount">Desde $___</p>
+            <ul>
+              <li>5–10 imágenes editadas</li>
+              <li>Optimización para web</li>
+              <li>1 revisión</li>
+            </ul>
+            <a class="btn ghost full" href="#contacto">Agendar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section alt">
+      <div class="container contact">
+        <div>
+          <h2>Contacto</h2>
+          <p class="muted">Cuéntame qué quieres mejorar (web o imágenes). Te respondo hoy.</p>
+          <div class="contact-cards">
+            <a class="contact-card" href="https://wa.me/5213313820701" target="_blank" rel="noreferrer">
+              <strong>WhatsApp</strong>
+              <span class="muted">+52 33 1382 0701</span>
+            </a>
+            <a class="contact-card" href="mailto:daniela.alatorre.digital@gmail.com">
+              <strong>Email</strong>
+              <span class="muted">daniela.alatorre.digital@gmail.com</span>
+            </a>
+          </div>
+          <p class="tiny muted">📍 Guadalajara, Jalisco</p>
+        </div>
+
+        <form class="form" onsubmit="event.preventDefault(); alert('Por ahora, contáctame por WhatsApp o Email.');">
+          <label>Nombre
+            <input type="text" placeholder="Tu nombre" />
+          </label>
+          <label>Tu sitio web (opcional)
+            <input type="text" placeholder="https://tusitio.com" />
+          </label>
+          <label>Mensaje
+            <textarea rows="5" placeholder="¿Qué necesitas mejorar? (imágenes / web / diagnóstico)"></textarea>
+          </label>
+          <button class="btn full" type="submit">Enviar</button>
+          <p class="tiny muted">Para recibir mensajes sin backend: usa WhatsApp o configura Netlify Forms.</p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container row">
+        <p class="muted">© <span id="y"></span> Aguilar Alatorre Digital. Todos los derechos reservados.
+          <a class="muted" href="#inicio">Volver arriba ↑</a>
+        </p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
