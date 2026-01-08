@@ -1,216 +1,385 @@
-<!doctype html>
-<html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aguilar Alatorre Digital | Portafolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <meta name="description" content="Edición de imágenes y diseño para redes. Portafolio, paquetes y contacto." />
-</head>
-<body>
+:root{
+  --bg: #0F0A1A;
+  --surface: rgba(255,255,255,.04);
+  --surface2: rgba(255,255,255,.06);
+  --border: rgba(255,255,255,.10);
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.72);
 
-  <header class="topbar">
-    <div class="container row">
-      <a class="logo brand" href="#inicio">
-        <img src="logo.png.png" alt="Aguilar Alatorre Digital" />
-        <span>Aguilar Alatorre Digital</span>
-      </a>
-      <nav class="nav">
-        <a href="#servicios">Servicios</a>
-        <a href="#portafolio">Portafolio</a>
-        <a href="#proceso">Proceso</a>
-        <a href="#paquetes">Paquetes</a>
-        <a class="btn small" href="#contacto">Contacto</a>
-      </nav>
-    </div>
-  </header>
+  --accent: #FF2EA6;   /* magenta */
+  --gold:   #FFC83D;   /* dorado */
+  --purple: #7B61FF;   /* morado */
+  --radius: 18px;
+  --shadow: 0 18px 55px rgba(0,0,0,.45);
+}
 
-  <main id="inicio">
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(1100px 500px at 15% -10%, rgba(255,46,166,.22), transparent 60%),
+    radial-gradient(900px 500px at 90% 10%, rgba(255,200,61,.16), transparent 55%),
+    radial-gradient(900px 600px at 60% 110%, rgba(123,97,255,.18), transparent 55%),
+    var(--bg);
+}
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <p class="tag">Edición de imágenes • Redes sociales • Branding</p>
-          <h1>
-            Hago que tus fotos se vean
-            <span class="accent">profesionales</span>
-            y listas para vender.
-          </h1>
-          <p class="sub">
-            Edición y diseño para emprendedores: productos, menús, promociones,
-            anuncios y contenido para Instagram y Facebook.
-          </p>
+.container{
+  width:min(1100px, calc(100% - 40px));
+  margin:0 auto;
+}
 
-          <div class="cta-row">
-            <a class="btn"
-               href="https://wa.me/523313820701?text=Hola%20me%20interesa%20tu%20servicio%20de%20edici%C3%B3n%20de%20im%C3%A1genes"
-               target="_blank" rel="noreferrer">
-              Escríbeme por WhatsApp
-            </a>
-            <a class="btn ghost" href="#portafolio">Ver trabajos</a>
-          </div>
+.row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+}
 
-          <div class="badges">
-            <div class="badge">
-              <strong>Entrega</strong>
-              <span>24–48 hrs</span>
-            </div>
-            <div class="badge">
-              <strong>Formatos</strong>
-              <span>IG / FB / Stories</span>
-            </div>
-            <div class="badge">
-              <strong>Revisión</strong>
-              <span>1 ronda incluida</span>
-            </div>
-          </div>
-        </div>
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:50;
+  backdrop-filter: blur(10px);
+  background: rgba(10,7,18,.55);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
 
-        <div class="card">
-          <div class="avatar"></div>
-          <h3>Aguilar Alatorre Digital</h3>
-          <p class="muted">Editora de imágenes • Contenido para redes</p>
-          <ul class="mini">
-            <li>✔ Retoque y limpieza</li>
-            <li>✔ Ajustes de color y luz</li>
-            <li>✔ Diseños promocionales</li>
-          </ul>
-          <a class="btn full"
-             href="https://wa.me/523313820701?text=Hola%20quiero%20cotizar%20edici%C3%B3n%20de%20im%C3%A1genes"
-             target="_blank" rel="noreferrer">
-            Cotizar
-          </a>
-        </div>
-      </div>
-    </section>
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  color: var(--text);
+  font-weight:800;
+  letter-spacing:-0.01em;
+}
 
-    <!-- SERVICIOS -->
-    <section id="servicios" class="section">
-      <div class="container">
-        <h2>Servicios</h2>
-        <p class="muted">Elige lo que necesites. Si no lo ves aquí, lo armamos.</p>
+.brand img{
+  width:36px;
+  height:36px;
+  border-radius:12px;
+  border: 1px solid rgba(255,255,255,.10);
+}
 
-        <div class="grid3">
-          <div class="panel">
-            <h3>Edición de fotos</h3>
-            <ul>
-              <li>Color, luz y contraste</li>
-              <li>Recorte y fondo limpio</li>
-              <li>Retoque estético profesional</li>
-            </ul>
-          </div>
+.nav{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.nav a{
+  color: var(--muted);
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px;
+  padding:10px 10px;
+  border-radius:12px;
+}
+.nav a:hover{
+  color: var(--text);
+  background: rgba(255,255,255,.06);
+}
 
-          <div class="panel">
-            <h3>Diseños para redes</h3>
-            <ul>
-              <li>Posts, stories y reels</li>
-              <li>Promociones, precios y menús</li>
-              <li>Plantillas consistentes</li>
-            </ul>
-          </div>
+main{ overflow-x:hidden; }
 
-          <div class="panel">
-            <h3>Mini branding</h3>
-            <ul>
-              <li>Paleta de colores</li>
-              <li>Estilo visual para tu feed</li>
-              <li>Guía rápida de uso</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+/* HERO */
+.hero{
+  padding: 76px 0 40px;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1.25fr .85fr;
+  gap: 22px;
+  align-items:start;
+}
+.tag{
+  display:inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  color: var(--text);
+  font-weight:700;
+  font-size:13px;
+}
+h1{
+  margin: 16px 0 10px;
+  font-size: clamp(34px, 4vw, 54px);
+  line-height:1.05;
+  letter-spacing:-0.04em;
+}
+.accent{
+  background: linear-gradient(90deg, var(--accent), var(--gold));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color: transparent;
+}
+.sub{
+  margin: 0 0 18px;
+  color: var(--muted);
+  line-height:1.7;
+  max-width: 62ch;
+}
 
-    <!-- PORTAFOLIO -->
-    <section id="portafolio" class="section alt">
-      <div class="container">
-        <h2>Portafolio</h2>
-        <p class="muted">
-          Ejemplos de trabajos. Tip: “Antes / Después” vende muchísimo.
-        </p>
+.cta-row{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin: 16px 0 18px;
+}
 
-        <div class="grid3">
-          <article class="work">
-            <div class="thumb">Ejemplo 1</div>
-            <h4>Producto</h4>
-            <p class="muted">Mejora de luz y color.</p>
-          </article>
+/* BUTTONS */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 12px 14px;
+  border-radius: 14px;
+  font-weight:800;
+  text-decoration:none;
+  border: 1px solid transparent;
+  letter-spacing:-0.01em;
+  background: linear-gradient(135deg, var(--accent), var(--purple));
+  color: #fff;
+  box-shadow: 0 18px 40px rgba(255,46,166,.18);
+}
+.btn:hover{ filter: brightness(1.05); }
+.btn.ghost{
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.14);
+  color: var(--text);
+  box-shadow:none;
+}
+.btn.small{
+  padding: 10px 12px;
+  font-size: 13px;
+}
+.btn.full{ width:100%; }
 
-          <article class="work">
-            <div class="thumb">Ejemplo 2</div>
-            <h4>Promoción</h4>
-            <p class="muted">Diseño para Instagram.</p>
-          </article>
+/* BADGES */
+.badges{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 14px;
+}
+.badge{
+  padding: 12px 12px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+}
+.badge strong{ display:block; font-weight:900; }
+.badge span{ color: var(--muted); font-size:13px; }
 
-          <article class="work">
-            <div class="thumb">Ejemplo 3</div>
-            <h4>Menú</h4>
-            <p class="muted">Formato claro y legible.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+/* CARD */
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+.avatar{
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(255,46,166,.6), rgba(123,97,255,.55));
+  border: 1px solid rgba(255,255,255,.12);
+  margin-bottom: 10px;
+}
+.muted{ color: var(--muted); }
+.mini{
+  margin: 10px 0 14px;
+  padding: 0 0 0 18px;
+  color: var(--muted);
+  line-height:1.7;
+}
 
-    <!-- CONTACTO -->
-    <section id="contacto" class="section">
-      <div class="container contact">
-        <div>
-          <h2>Contacto</h2>
-          <p class="muted">
-            Cuéntame qué vendes y qué quieres mejorar. Te respondo hoy.
-          </p>
+/* SECTIONS */
+.section{
+  padding: 70px 0;
+}
+.section.alt{
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.00));
+  border-top: 1px solid rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+h2{
+  margin: 0 0 10px;
+  font-size: clamp(26px, 2.8vw, 38px);
+  letter-spacing:-0.02em;
+}
+.grid3{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 16px;
+}
+.panel{
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+.panel h3{ margin:0 0 8px; }
+.panel ul{
+  margin: 10px 0 0;
+  padding: 0 0 0 18px;
+  color: var(--muted);
+  line-height: 1.7;
+}
 
-          <div class="contact-cards">
-            <a class="contact-card"
-               href="https://wa.me/523313820701"
-               target="_blank" rel="noreferrer">
-              <strong>WhatsApp</strong>
-              <span class="muted">+52 33 1382 0701</span>
-            </a>
+.work{
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+.thumb{
+  height: 140px;
+  border-radius: 16px;
+  display:grid;
+  place-items:center;
+  font-weight:900;
+  color: rgba(255,255,255,.9);
+  background:
+    radial-gradient(500px 180px at 20% 30%, rgba(255,46,166,.25), transparent 60%),
+    radial-gradient(500px 180px at 80% 50%, rgba(255,200,61,.18), transparent 60%),
+    radial-gradient(500px 220px at 50% 120%, rgba(123,97,255,.22), transparent 60%),
+    rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.10);
+  margin-bottom: 10px;
+}
 
-            <a class="contact-card"
-               href="mailto:aguilar.alatorre.digital@gmail.com">
-              <strong>Email</strong>
-              <span class="muted">aguilar.alatorre.digital@gmail.com</span>
-            </a>
-          </div>
-        </div>
+.note{
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.10);
+  color: rgba(255,255,255,.82);
+}
 
-        <form class="form"
-              onsubmit="event.preventDefault(); alert('Escríbeme por WhatsApp o correo 😊');">
-          <label>
-            Nombre
-            <input type="text" placeholder="Tu nombre" />
-          </label>
+/* Steps */
+.steps{
+  display:grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+.step{
+  display:flex;
+  gap: 12px;
+  align-items:flex-start;
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.10);
+}
+.step span{
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  display:grid;
+  place-items:center;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--accent), var(--purple));
+}
+.step h4{ margin:0 0 6px; }
+.step p{ margin:0; }
 
-          <label>
-            Mensaje
-            <textarea rows="5"
-              placeholder="¿Qué necesitas editar o diseñar?"></textarea>
-          </label>
+/* Pricing */
+.price{
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+.price.featured{
+  background: linear-gradient(135deg, rgba(255,200,61,.12), rgba(255,46,166,.10));
+  border: 1px solid rgba(255,255,255,.12);
+}
+.amount{
+  font-size: 22px;
+  font-weight: 900;
+  margin: 6px 0 12px;
+}
+.price ul{
+  margin: 0 0 12px;
+  padding: 0 0 0 18px;
+  color: var(--muted);
+  line-height: 1.7;
+}
 
-          <button class="btn full" type="submit">Enviar</button>
-        </form>
-      </div>
-    </section>
+/* Contact */
+.contact{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items:start;
+}
+.contact-cards{
+  display:grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+.contact-card{
+  display:flex;
+  justify-content:space-between;
+  gap: 12px;
+  text-decoration:none;
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.10);
+  color: var(--text);
+}
+.contact-card:hover{ background: rgba(255,255,255,.06); }
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="container row">
-        <p class="muted">
-          © <span id="y"></span> Aguilar Alatorre Digital.
-          Todos los derechos reservados.
-        </p>
-        <a class="muted" href="#inicio">Volver arriba ↑</a>
-      </div>
-    </footer>
+.form{
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+label{
+  display:block;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+input, textarea{
+  width:100%;
+  margin-top: 8px;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.18);
+  color: var(--text);
+  outline:none;
+}
+input:focus, textarea:focus{
+  border-color: rgba(255,46,166,.6);
+  box-shadow: 0 0 0 4px rgba(255,46,166,.10);
+}
+.tiny{ font-size: 12.5px; }
 
-  </main>
+/* Footer */
+.footer{
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding: 24px 0;
+  background: rgba(0,0,0,.15);
+}
+.footer a{ text-decoration:none; }
+.footer a:hover{ text-decoration:underline; }
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
-
-</body>
-</html>
+/* Responsive */
+@media (max-width: 980px){
+  .hero-grid{ grid-template-columns: 1fr; }
+  .badges{ grid-template-columns: 1fr; }
+  .grid3{ grid-template-columns: 1fr; }
+  .contact{ grid-template-columns: 1fr; }
+  .nav{ display:none; }
+}
