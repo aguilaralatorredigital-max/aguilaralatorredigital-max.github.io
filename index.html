@@ -3,18 +3,38 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Aguilar Alatorre Digital | Web & Consultoría</title>
-  <link rel="stylesheet" href="styles.css" />
   <meta name="description" content="Mejora y consultoría de páginas web, optimización de procesos digitales y desarrollo web a la medida." />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="canonical" href="https://aguilaralatorredigital-max.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:title" content="Aguilar Alatorre Digital | Web & Consultoría" />
+  <meta property="og:description" content="Mejora y consultoría de páginas web, optimización de procesos digitales y desarrollo web a la medida." />
+  <meta property="og:url" content="https://aguilaralatorredigital-max.github.io/" />
+  <!-- TODO: cuando tengas una imagen, cambia esta ruta -->
+  <meta property="og:image" content="https://aguilaralatorredigital-max.github.io/og.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Aguilar Alatorre Digital | Web & Consultoría" />
+  <meta name="twitter:description" content="Mejora y consultoría de páginas web, optimización de procesos digitales y desarrollo web a la medida." />
+  <meta name="twitter:image" content="https://aguilaralatorredigital-max.github.io/og.png" />
 </head>
+
 <body>
   <header class="topbar">
     <div class="container row">
-      <a class="logo brand" href="#inicio">
+      <a class="logo brand" href="#inicio" aria-label="Ir al inicio">
         <img src="logo.png.png" alt="Aguilar Alatorre Digital" />
         <span>Aguilar Alatorre Digital</span>
       </a>
-      <nav class="nav">
+
+      <nav class="nav" aria-label="Navegación principal">
         <a href="#servicios">Servicios</a>
         <a href="#como-ayudo">Cómo ayudo</a>
         <a href="#proceso">Proceso</a>
@@ -23,9 +43,9 @@
     </div>
   </header>
 
-  <main id="inicio">
+  <main>
     <!-- HERO -->
-    <section class="hero">
+    <section id="inicio" class="hero">
       <div class="container hero-grid">
         <div>
           <p class="tag">Páginas web • Diagnóstico • Consultoría • Desarrollo a la medida</p>
@@ -36,15 +56,18 @@
           </h1>
 
           <p class="sub">
-            Me enfoco en <strong>mejorar y optimizar</strong> páginas web existentes, hacer <strong>diagnóstico/consultoría</strong> para detectar
-            problemas (móvil, velocidad, claridad, contacto) y apoyar en <strong>mejoras de procesos</strong> dentro de sistemas.
+            Me enfoco en <strong>mejorar y optimizar</strong> páginas web existentes, hacer <strong>diagnóstico/consultoría</strong>
+            para detectar problemas (móvil, velocidad, claridad, contacto) y apoyar en <strong>mejoras de procesos</strong> dentro de sistemas.
             Si lo necesitas, también hago <strong>desarrollo web a la medida</strong> según alcance.
           </p>
 
           <div class="cta-row">
-            <a class="btn"
-               href="https://wa.me/5213313820701?text=Hola%20Daniela%2C%20me%20interesa%20una%20asesor%C3%ADa%20para%20mejorar%20mi%20p%C3%A1gina%20web%20/%20proceso%20digital.%20Mi%20sitio%20es%3A%20"
-               target="_blank" rel="noreferrer">
+            <a
+              class="btn"
+              href="https://wa.me/5213313820701?text=Hola%20Daniela%2C%20me%20interesa%20un%20diagn%C3%B3stico%20para%20mejorar%20mi%20p%C3%A1gina%20web.%0A%0ASitio%3A%20%0AObjetivo%20principal%3A%20%0A3%20metas%3A%201)%20%202)%20%203)%20"
+              target="_blank"
+              rel="noreferrer"
+            >
               Escríbeme por WhatsApp
             </a>
             <a class="btn ghost" href="#servicios">Ver servicios</a>
@@ -67,7 +90,7 @@
         </div>
 
         <div class="card">
-          <div class="avatar"></div>
+          <div class="avatar" aria-hidden="true"></div>
           <p class="muted">Aguilar Alatorre Digital</p>
 
           <ul class="mini">
@@ -78,6 +101,7 @@
           </ul>
 
           <a class="btn full" href="#contacto">Pedir propuesta</a>
+
           <p class="tiny muted" style="margin-top:10px;">
             Si me compartes tu web y 3 objetivos, te mando una propuesta clara.
           </p>
@@ -172,7 +196,7 @@
     </section>
 
     <!-- PROCESO -->
-    <section id="proceso" class="section alt">
+    <section id="proceso" class="section">
       <div class="container">
         <h2>Proceso</h2>
 
@@ -224,8 +248,11 @@
               <strong>WhatsApp</strong>
               <span class="muted">+52 33 1382 0701</span>
             </a>
-            <a class="contact-card"
-               href="mailto:aguilar.alatorre.digital@gmail.com?subject=Propuesta%20de%20mejora%20web%20/%20consultor%C3%ADa&body=Hola%20Daniela%2C%0A%0AMe%20interesa%20una%20propuesta%20para%20mejorar%20mi%20web%20/%20proceso%20digital.%0A%0ASitio%20web%3A%0AObjetivo%20principal%3A%0A%0AGracias.">
+
+            <a
+              class="contact-card"
+              href="mailto:aguilar.alatorre.digital@gmail.com?subject=Propuesta%20de%20mejora%20web%20/%20consultor%C3%ADa&body=Hola%20Daniela%2C%0A%0AMe%20interesa%20una%20propuesta%20para%20mejorar%20mi%20web%20/%20proceso%20digital.%0A%0ASitio%20web%3A%0AObjetivo%20principal%3A%0A%0AGracias."
+            >
               <strong>Email</strong>
               <span class="muted">aguilar.alatorre.digital@gmail.com</span>
             </a>
@@ -234,21 +261,24 @@
           <p class="tiny muted">📍 Guadalajara, Jalisco</p>
         </div>
 
-        <form class="form" onsubmit="event.preventDefault(); alert('Por ahora, contáctame por WhatsApp o Email.');">
+        <form class="form" id="leadForm">
           <label>Nombre
-            <input type="text" placeholder="Tu nombre" />
+            <input name="nombre" type="text" placeholder="Tu nombre" required />
           </label>
 
           <label>Tu sitio web (opcional)
-            <input type="text" placeholder="https://tusitio.com" />
+            <input name="sitio" type="url" placeholder="https://tusitio.com" />
           </label>
 
           <label>Mensaje
-            <textarea rows="5" placeholder="Ej: Quiero mejorar mi web (móvil/velocidad/contacto). También necesito revisar un proceso dentro de mi sistema."></textarea>
+            <textarea name="mensaje" rows="5" placeholder="Ej: Quiero mejorar mi web (móvil/velocidad/contacto). También necesito revisar un proceso dentro de mi sistema." required></textarea>
           </label>
 
-          <button class="btn full" type="submit">Enviar</button>
-          
+          <button class="btn full" type="submit">Enviar por WhatsApp</button>
+
+          <p class="tiny muted" style="margin-top:10px;">
+            *Al enviar, se abrirá WhatsApp con tu mensaje listo para mandar.
+          </p>
         </form>
       </div>
     </section>
@@ -264,7 +294,29 @@
   </main>
 
   <script>
+    // Año
     document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Form -> WhatsApp (mensaje armado)
+    const leadForm = document.getElementById("leadForm");
+    leadForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const data = new FormData(leadForm);
+      const nombre = (data.get("nombre") || "").toString().trim();
+      const sitio = (data.get("sitio") || "").toString().trim();
+      const mensaje = (data.get("mensaje") || "").toString().trim();
+
+      const texto =
+        `Hola Daniela, soy ${nombre}.\n\n` +
+        `Me interesa una propuesta para mejorar mi web / proceso digital.\n\n` +
+        (sitio ? `Sitio: ${sitio}\n\n` : "") +
+        `Mensaje:\n${mensaje}`;
+
+      const url = "https://wa.me/5213313820701?text=" + encodeURIComponent(texto);
+      window.open(url, "_blank", "noopener,noreferrer");
+      leadForm.reset();
+    });
   </script>
 </body>
 </html>
