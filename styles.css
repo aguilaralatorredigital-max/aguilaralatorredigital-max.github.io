@@ -209,12 +209,14 @@ h4{ font-size:16px; margin:0 0 6px; }
   padding:18px;
   box-shadow: var(--shadow-sm);
 }
-.avatar{
+.avatar-logo{
   width:72px;
   height:72px;
   border-radius:18px;
-  background: linear-gradient(135deg, var(--accent2), var(--accent));
   border:1px solid var(--border);
+  object-fit:contain;
+  background: rgba(255,255,255,.03);
+  padding:8px;
   margin-bottom:12px;
 }
 .mini{
@@ -347,13 +349,4 @@ label{
 @media (max-width: 991.98px){
   .hero{ padding-top: 56px; }
 }
-.avatar-logo{
-  width:72px;
-  height:72px;
-  border-radius:18px;
-  border:1px solid var(--border);
-  object-fit:contain;
-  background: rgba(255,255,255,.03);
-  padding:8px;
-  margin-bottom:12px;
-}
+
