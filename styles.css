@@ -347,3 +347,13 @@ label{
 @media (max-width: 991.98px){
   .hero{ padding-top: 56px; }
 }
+.avatar-logo{
+  width:72px;
+  height:72px;
+  border-radius:18px;
+  border:1px solid var(--border);
+  object-fit:contain;
+  background: rgba(255,255,255,.03);
+  padding:8px;
+  margin-bottom:12px;
+}
