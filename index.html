@@ -7,7 +7,6 @@
   <title>Aguilar Alatorre Digital | Web & Consultoría</title>
   <meta name="description" content="Mejora y consultoría de páginas web, optimización de procesos digitales y desarrollo web a la medida." />
 
-  <link rel="stylesheet" href="styles.css" />
   <link rel="canonical" href="https://aguilaralatorredigital-max.github.io/" />
 
   <!-- Open Graph -->
@@ -16,7 +15,6 @@
   <meta property="og:title" content="Aguilar Alatorre Digital | Web & Consultoría" />
   <meta property="og:description" content="Mejora y consultoría de páginas web, optimización de procesos digitales y desarrollo web a la medida." />
   <meta property="og:url" content="https://aguilaralatorredigital-max.github.io/" />
-  <!-- TODO: cuando tengas una imagen, cambia esta ruta -->
   <meta property="og:image" content="https://aguilaralatorredigital-max.github.io/og.png" />
 
   <!-- Twitter Card -->
@@ -24,188 +22,240 @@
   <meta name="twitter:title" content="Aguilar Alatorre Digital | Web & Consultoría" />
   <meta name="twitter:description" content="Mejora y consultoría de páginas web, optimización de procesos digitales y desarrollo web a la medida." />
   <meta name="twitter:image" content="https://aguilaralatorredigital-max.github.io/og.png" />
+
+  <!-- Bootstrap 5.3 (CDN) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+
+  <!-- Tu CSS (branding) -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <header class="topbar">
-    <div class="container row">
-      <a class="logo brand" href="#inicio" aria-label="Ir al inicio">
-        <img src="logo.png.png" alt="Aguilar Alatorre Digital" />
-        <span>Aguilar Alatorre Digital</span>
-      </a>
+  <!-- TOPBAR -->
+  <header class="topbar sticky-top">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand brand d-flex align-items-center gap-2" href="#inicio" aria-label="Ir al inicio">
+          <img src="logo.png.png" alt="Aguilar Alatorre Digital" width="34" height="34" />
+          <span>Aguilar Alatorre Digital</span>
+        </a>
 
-      <nav class="nav" aria-label="Navegación principal">
-        <a href="#servicios">Servicios</a>
-        <a href="#como-ayudo">Cómo ayudo</a>
-        <a href="#proceso">Proceso</a>
-        <a class="btn small" href="#contacto">Contacto</a>
-      </nav>
-    </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+          <ul class="navbar-nav align-items-lg-center gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#como-ayudo">Cómo ayudo</a></li>
+            <li class="nav-item"><a class="nav-link" href="#proceso">Proceso</a></li>
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-aad btn-sm px-3" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
   <main>
     <!-- HERO -->
-    <section id="inicio" class="hero">
-      <div class="container hero-grid">
-        <div>
-          <p class="tag">Páginas web • Diagnóstico • Consultoría • Desarrollo a la medida</p>
+    <section id="inicio" class="hero py-5">
+      <div class="container py-lg-4">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-7">
+            <p class="tag mb-3">Páginas web • Diagnóstico • Consultoría • Desarrollo a la medida</p>
 
-          <h1>
-            Mejoramos tu <span class="accent">página web</span> y tus procesos digitales
-            para que tu negocio sea más claro, rápido y fácil de usar.
-          </h1>
+            <h1 class="display-title mb-3">
+              Mejoramos tu <span class="accent">página web</span> y tus procesos digitales
+              para que tu negocio sea más claro, rápido y fácil de usar.
+            </h1>
 
-          <p class="sub">
-            Nos enfocamos en <strong>mejorar y optimizar</strong> páginas web existentes, hacer <strong>diagnóstico/consultoría</strong>
-            para detectar problemas (móvil, velocidad, claridad, contacto) y apoyar en <strong>mejoras de procesos</strong> dentro de sistemas.
-            Si lo necesitas, también hacemos <strong>desarrollo web a la medida</strong> según alcance.
-          </p>
+            <p class="sub mb-3">
+              Nos enfocamos en <strong>mejorar y optimizar</strong> páginas web existentes, hacer <strong>diagnóstico/consultoría</strong>
+              para detectar problemas (móvil, velocidad, claridad, contacto) y apoyar en <strong>mejoras de procesos</strong> dentro de sistemas.
+              Si lo necesitas, también hacemos <strong>desarrollo web a la medida</strong> según alcance.
+            </p>
 
-          <div class="cta-row">
-            <a
-              class="btn"
-              href="https://wa.me/5213313820701?text=Hola%20Daniela%2C%20me%20interesa%20un%20diagn%C3%B3stico%20para%20mejorar%20mi%20p%C3%A1gina%20web.%0A%0ASitio%3A%20%0AObjetivo%20principal%3A%20%0A3%20metas%3A%201)%20%202)%20%203)%20"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Escríbenos por WhatsApp
-            </a>
-            <a class="btn ghost" href="#servicios">Ver servicios</a>
+            <div class="d-flex flex-wrap gap-2 mt-3">
+              <a
+                class="btn btn-aad"
+                href="https://wa.me/5213313820701?text=Hola%20Daniela%2C%20me%20interesa%20un%20diagn%C3%B3stico%20para%20mejorar%20mi%20p%C3%A1gina%20web.%0A%0ASitio%3A%20%0AObjetivo%20principal%3A%20%0A3%20metas%3A%201)%20%202)%20%203)%20"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Escríbenos por WhatsApp
+              </a>
+              <a class="btn btn-aad-ghost" href="#servicios">Ver servicios</a>
+            </div>
+
+            <div class="row g-2 mt-4">
+              <div class="col-12 col-md-4">
+                <div class="badge-card h-100">
+                  <strong>Diagnóstico</strong>
+                  <span>24–48 hrs (inicial)</span>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="badge-card h-100">
+                  <strong>Enfoque</strong>
+                  <span>Práctico y gradual</span>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="badge-card h-100">
+                  <strong>Prioridad</strong>
+                  <span>Móvil + claridad + performance</span>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="badges">
-            <div class="badge">
-              <strong>Diagnóstico</strong>
-              <span>24–48 hrs (inicial)</span>
-            </div>
-            <div class="badge">
-              <strong>Enfoque</strong>
-              <span>Práctico y gradual</span>
-            </div>
-            <div class="badge">
-              <strong>Prioridad</strong>
-              <span>Móvil + claridad + performance</span>
+          <div class="col-lg-5">
+            <div class="card aad-card">
+              <div class="avatar" aria-hidden="true"></div>
+              <p class="muted mb-2">Aguilar Alatorre Digital</p>
+
+              <ul class="mini mb-3">
+                <li>✔ Diagnóstico de web (errores, UX, móvil, velocidad)</li>
+                <li>✔ Mejora y actualización de sitios</li>
+                <li>✔ Consultoría de procesos digitales / sistemas</li>
+                <li>✔ Desarrollo web a la medida</li>
+              </ul>
+
+              <a class="btn btn-aad w-100" href="#contacto">Pedir propuesta</a>
+
+              <p class="tiny muted mt-2 mb-0">
+                Si nos compartes tu web y 3 objetivos, te mandamos una propuesta clara.
+              </p>
             </div>
           </div>
-        </div>
-
-        <div class="card">
-          <div class="avatar" aria-hidden="true"></div>
-          <p class="muted">Aguilar Alatorre Digital</p>
-
-          <ul class="mini">
-            <li>✔ Diagnóstico de web (errores, UX, móvil, velocidad)</li>
-            <li>✔ Mejora y actualización de sitios</li>
-            <li>✔ Consultoría de procesos digitales / sistemas</li>
-            <li>✔ Desarrollo web a la medida</li>
-          </ul>
-
-          <a class="btn full" href="#contacto">Pedir propuesta</a>
-
-          <p class="tiny muted" style="margin-top:10px;">
-            Si nos compartes tu web y 3 objetivos, te mandamos una propuesta clara.
-          </p>
         </div>
       </div>
     </section>
 
     <!-- SERVICIOS -->
-    <section id="servicios" class="section">
+    <section id="servicios" class="section py-5">
       <div class="container">
-        <h2>Servicios</h2>
-        <p class="muted">Solo web y consultoría; cada proyecto se define por alcance.</p>
+        <h2 class="section-title">Servicios</h2>
+        <p class="muted mb-4">Solo web y consultoría; cada proyecto se define por alcance.</p>
 
-        <div class="grid3">
-          <div class="panel">
-            <h3>Diagnóstico y consultoría web</h3>
-            <ul>
-              <li>Revisión de experiencia (UX) y claridad del contenido</li>
-              <li>Detección de errores visibles y puntos de fricción</li>
-              <li>Revisión móvil (responsive) y performance</li>
-              <li>Lista de mejoras priorizadas (quick wins)</li>
-            </ul>
+        <div class="row g-3">
+          <div class="col-lg-4">
+            <div class="panel h-100">
+              <h3>Diagnóstico y consultoría web</h3>
+              <ul>
+                <li>Revisión de experiencia (UX) y claridad del contenido</li>
+                <li>Detección de errores visibles y puntos de fricción</li>
+                <li>Revisión móvil (responsive) y performance</li>
+                <li>Lista de mejoras priorizadas (quick wins)</li>
+              </ul>
+            </div>
           </div>
 
-          <div class="panel">
-            <h3>Mejora / actualización de página web</h3>
-            <ul>
-              <li>Reestructura de secciones (qué haces, cómo contactarte, confianza)</li>
-              <li>Optimización de navegación y llamadas a la acción</li>
-              <li>Mejoras técnicas básicas y mantenimiento</li>
-              <li>SEO local básico (lo esencial)</li>
-            </ul>
+          <div class="col-lg-4">
+            <div class="panel h-100">
+              <h3>Mejora / actualización de página web</h3>
+              <ul>
+                <li>Reestructura de secciones (qué haces, cómo contactarte, confianza)</li>
+                <li>Optimización de navegación y llamadas a la acción</li>
+                <li>Mejoras técnicas básicas y mantenimiento</li>
+                <li>SEO local básico (lo esencial)</li>
+              </ul>
+            </div>
           </div>
 
-          <div class="panel">
-            <h3>Procesos y desarrollo a la medida</h3>
-            <ul>
-              <li>Optimización de flujos dentro de tu sistema (pasos, pantallas, formularios)</li>
-              <li>Propuestas de mejora y documentación de proceso</li>
-              <li>Automatizaciones simples (según necesidad)</li>
-              <li>Desarrollo web a la medida (según alcance)</li>
-            </ul>
+          <div class="col-lg-4">
+            <div class="panel h-100">
+              <h3>Procesos y desarrollo a la medida</h3>
+              <ul>
+                <li>Optimización de flujos dentro de tu sistema (pasos, pantallas, formularios)</li>
+                <li>Propuestas de mejora y documentación de proceso</li>
+                <li>Automatizaciones simples (según necesidad)</li>
+                <li>Desarrollo web a la medida (según alcance)</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- COMO AYUDO -->
-    <section id="como-ayudo" class="section alt">
+    <section id="como-ayudo" class="section section-alt py-5">
       <div class="container">
-        <h2>Cómo ayudo</h2>
-        <p class="muted">
+        <h2 class="section-title">Cómo ayudo</h2>
+        <p class="muted mb-4">
           Muchas webs no necesitan empezar de cero. Necesitan claridad, confianza y un camino simple para convertir visitas en contacto.
         </p>
 
-        <div class="grid3">
-          <div class="panel">
-            <h3>Problemas comunes</h3>
-            <ul>
-              <li>Web lenta o difícil de usar en celular</li>
-              <li>No queda claro qué ofrecen o cómo contactarlos</li>
-              <li>Información incompleta: horarios, ubicación, servicios</li>
-              <li>Errores visibles o secciones abandonadas</li>
-            </ul>
+        <div class="row g-3">
+          <div class="col-lg-4">
+            <div class="panel h-100">
+              <h3>Problemas comunes</h3>
+              <ul>
+                <li>Web lenta o difícil de usar en celular</li>
+                <li>No queda claro qué ofrecen o cómo contactarlos</li>
+                <li>Información incompleta: horarios, ubicación, servicios</li>
+                <li>Errores visibles o secciones abandonadas</li>
+              </ul>
+            </div>
           </div>
 
-          <div class="panel">
-            <h3>Quick wins</h3>
-            <ul>
-              <li>Orden y jerarquía del contenido</li>
-              <li>Botones claros: WhatsApp / Llamar / Reservar</li>
-              <li>Corrección de enlaces y secciones rotas</li>
-              <li>Mejoras rápidas de performance</li>
-            </ul>
+          <div class="col-lg-4">
+            <div class="panel h-100">
+              <h3>Quick wins</h3>
+              <ul>
+                <li>Orden y jerarquía del contenido</li>
+                <li>Botones claros: WhatsApp / Llamar / Reservar</li>
+                <li>Corrección de enlaces y secciones rotas</li>
+                <li>Mejoras rápidas de performance</li>
+              </ul>
+            </div>
           </div>
 
-          <div class="panel">
-            <h3>Mejora completa</h3>
-            <ul>
-              <li>Estructura esencial (lo que el usuario busca)</li>
-              <li>Diseño moderno y consistente</li>
-              <li>Optimización móvil + accesibilidad básica</li>
-              <li>Mejora de procesos digitales (si aplica)</li>
-            </ul>
+          <div class="col-lg-4">
+            <div class="panel h-100">
+              <h3>Mejora completa</h3>
+              <ul>
+                <li>Estructura esencial (lo que el usuario busca)</li>
+                <li>Diseño moderno y consistente</li>
+                <li>Optimización móvil + accesibilidad básica</li>
+                <li>Mejora de procesos digitales (si aplica)</li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div class="note">
+        <div class="note mt-4">
           <strong>Tip:</strong> Podemos iniciar con diagnóstico + prioridades y avanzar por etapas según tu tiempo.
         </div>
       </div>
     </section>
 
     <!-- PROCESO -->
-    <section id="proceso" class="section">
+    <section id="proceso" class="section py-5">
       <div class="container">
-        <h2>Proceso</h2>
+        <h2 class="section-title">Proceso</h2>
 
-        <div class="steps">
+        <div class="d-grid gap-2 mt-3">
           <div class="step">
             <span>1</span>
             <div>
               <h4>Nos compartes tu web y objetivos</h4>
-              <p class="muted">Link + 3 metas (ej. más WhatsApp, reservas, claridad). Si es sistema: flujo y pantallas clave.</p>
+              <p class="muted mb-0">Link + 3 metas (ej. más WhatsApp, reservas, claridad). Si es sistema: flujo y pantallas clave.</p>
             </div>
           </div>
 
@@ -213,7 +263,7 @@
             <span>2</span>
             <div>
               <h4>Diagnóstico y propuesta</h4>
-              <p class="muted">Hallazgos priorizados + alcance sugerido (quick wins vs mejora completa).</p>
+              <p class="muted mb-0">Hallazgos priorizados + alcance sugerido (quick wins vs mejora completa).</p>
             </div>
           </div>
 
@@ -221,7 +271,7 @@
             <span>3</span>
             <div>
               <h4>Implementación</h4>
-              <p class="muted">Mejoras por fases. Lo urgente primero.</p>
+              <p class="muted mb-0">Mejoras por fases. Lo urgente primero.</p>
             </div>
           </div>
 
@@ -229,7 +279,7 @@
             <span>4</span>
             <div>
               <h4>Entrega y seguimiento</h4>
-              <p class="muted">Pruebas en móvil/escritorio + recomendaciones para mantenerlo actualizado.</p>
+              <p class="muted mb-0">Pruebas en móvil/escritorio + recomendaciones para mantenerlo actualizado.</p>
             </div>
           </div>
         </div>
@@ -237,61 +287,82 @@
     </section>
 
     <!-- CONTACTO -->
-    <section id="contacto" class="section alt">
-      <div class="container contact">
-        <div>
-          <h2>Contacto</h2>
-          <p class="muted">Cuéntanos qué quieres mejorar (web, consultoría o desarrollo). Te respondemos hoy.</p>
+    <section id="contacto" class="section section-alt py-5">
+      <div class="container">
+        <div class="row g-3 align-items-start">
+          <div class="col-lg-7">
+            <h2 class="section-title">Contacto</h2>
+            <p class="muted mb-3">Cuéntanos qué quieres mejorar (web, consultoría o desarrollo). Te respondemos hoy.</p>
 
-          <div class="contact-cards">
-            <a class="contact-card" href="https://wa.me/5213313820701" target="_blank" rel="noreferrer">
-              <strong>WhatsApp</strong>
-              <span class="muted">+52 33 1382 0701</span>
-            </a>
+            <div class="row g-2">
+              <div class="col-12 col-md-6">
+                <a class="contact-card d-block h-100" href="https://wa.me/5213313820701" target="_blank" rel="noreferrer">
+                  <strong>WhatsApp</strong>
+                  <span class="muted d-block">+52 33 1382 0701</span>
+                </a>
+              </div>
 
-            <a
-              class="contact-card"
-              href="mailto:aguilar.alatorre.digital@gmail.com?subject=Propuesta%20de%20mejora%20web%20/%20consultor%C3%ADa&body=Hola%20Daniela%2C%0A%0AMe%20interesa%20una%20propuesta%20para%20mejorar%20mi%20web%20/%20proceso%20digital.%0A%0ASitio%20web%3A%0AObjetivo%20principal%3A%0A%0AGracias."
-            >
-              <strong>Email</strong>
-              <span class="muted">aguilar.alatorre.digital@gmail.com</span>
-            </a>
+              <div class="col-12 col-md-6">
+                <a
+                  class="contact-card d-block h-100"
+                  href="mailto:aguilar.alatorre.digital@gmail.com?subject=Propuesta%20de%20mejora%20web%20/%20consultor%C3%ADa&body=Hola%20Daniela%2C%0A%0AMe%20interesa%20una%20propuesta%20para%20mejorar%20mi%20web%20/%20proceso%20digital.%0A%0ASitio%20web%3A%0AObjetivo%20principal%3A%0A%0AGracias."
+                >
+                  <strong>Email</strong>
+                  <span class="muted d-block">aguilar.alatorre.digital@gmail.com</span>
+                </a>
+              </div>
+            </div>
+
+            <p class="tiny muted mt-3 mb-0">📍 Guadalajara, Jalisco</p>
           </div>
 
-          <p class="tiny muted">📍 Guadalajara, Jalisco</p>
+          <div class="col-lg-5">
+            <form class="form" id="leadForm">
+              <label class="w-100">Nombre
+                <input name="nombre" type="text" class="form-control aad-input" placeholder="Tu nombre" required />
+              </label>
+
+              <label class="w-100">Tu sitio web (opcional)
+                <input name="sitio" type="url" class="form-control aad-input" placeholder="https://tusitio.com" />
+              </label>
+
+              <label class="w-100">Mensaje
+                <textarea
+                  name="mensaje"
+                  rows="5"
+                  class="form-control aad-input"
+                  placeholder="Ej: Quiero mejorar mi web (móvil/velocidad/contacto). También necesito revisar un proceso dentro de mi sistema."
+                  required
+                ></textarea>
+              </label>
+
+              <button class="btn btn-aad w-100" type="submit">Enviar por WhatsApp</button>
+
+              <p class="tiny muted mt-2 mb-0">
+                *Al enviar, se abrirá WhatsApp con tu mensaje listo para mandar.
+              </p>
+            </form>
+          </div>
         </div>
-
-        <form class="form" id="leadForm">
-          <label>Nombre
-            <input name="nombre" type="text" placeholder="Tu nombre" required />
-          </label>
-
-          <label>Tu sitio web (opcional)
-            <input name="sitio" type="url" placeholder="https://tusitio.com" />
-          </label>
-
-          <label>Mensaje
-            <textarea name="mensaje" rows="5" placeholder="Ej: Quiero mejorar mi web (móvil/velocidad/contacto). También necesito revisar un proceso dentro de mi sistema." required></textarea>
-          </label>
-
-          <button class="btn full" type="submit">Enviar por WhatsApp</button>
-
-          <p class="tiny muted" style="margin-top:10px;">
-            *Al enviar, se abrirá WhatsApp con tu mensaje listo para mandar.
-          </p>
-        </form>
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="container row">
-        <p class="muted">
-          © <span id="y"></span> Aguilar Alatorre Digital. Todos los derechos reservados.
+    <footer class="footer py-3">
+      <div class="container">
+        <p class="muted mb-0 d-flex flex-wrap gap-2 align-items-center justify-content-between">
+          <span>© <span id="y"></span> Aguilar Alatorre Digital. Todos los derechos reservados.</span>
           <a class="muted" href="#inicio">Volver arriba ↑</a>
         </p>
       </div>
     </footer>
   </main>
+
+  <!-- Bootstrap JS (para el menú móvil) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
 
   <script>
     // Año
